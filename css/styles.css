@@ -493,12 +493,64 @@ section { position: relative; padding: 84px 0; }
 .plan-card h3 { font-size: 1.3rem; margin-bottom: 8px; }
 .plan-card p { flex-grow: 1; font-size: .95rem; }
 .plan-card .btn { margin-top: 14px; align-self: center; }
+.plans-veg-line {
+  text-align: center;
+  margin-top: 18px;
+  font-size: .92rem;
+  font-weight: 600;
+  color: var(--nila);
+}
 .honesty-line {
   text-align: center;
   margin-top: 28px;
   font-size: .92rem;
   color: var(--nila-soft);
   font-style: italic;
+}
+
+/* thali photo band (stock photos, inside #mess only) */
+.thali-photo-band {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin: 44px 0 14px;
+}
+.thali-photo-item {
+  position: relative;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  aspect-ratio: 4 / 3;
+}
+.thali-photo-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.tp-cap {
+  position: absolute;
+  left: 10px;
+  bottom: 10px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--card);
+  color: var(--nila);
+  font-size: .78rem;
+  font-weight: 700;
+  padding: 6px 12px;
+  border-radius: 999px;
+  box-shadow: var(--shadow);
+  max-width: calc(100% - 20px);
+}
+.tp-mark { width: 10px; height: 10px; flex-shrink: 0; }
+.thali-photo-note {
+  text-align: center;
+  font-size: .86rem;
+  font-style: italic;
+  color: var(--nila-soft);
+  margin: 0 0 8px;
 }
 
 /* ---------- Menu ---------- */
@@ -533,6 +585,26 @@ table.menu-table {
   background: linear-gradient(180deg, var(--haldi), rgba(246,198,91,.35));
 }
 .menu-table tbody tr:last-child td { border-bottom: none; }
+.menu-dish {
+  display: flex;
+  align-items: flex-start;
+  gap: 6px;
+  margin: 0 0 8px;
+}
+.menu-dish:last-child { margin-bottom: 0; }
+.dish-mark { width: 10px; height: 10px; flex-shrink: 0; margin-top: 4px; }
+.menu-legend {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  flex-wrap: wrap;
+  text-align: center;
+  font-size: .85rem;
+  color: var(--nila-soft);
+  padding: 14px 0 4px;
+}
+.menu-legend .dish-mark { margin-top: 0; }
 .menu-note-chips {
   display: flex;
   flex-wrap: wrap;
@@ -562,6 +634,8 @@ table.menu-table {
 .day-card.is-sunday { border-left-color: var(--kumkum); background: linear-gradient(180deg, rgba(246,198,91,.28), var(--card) 40%); }
 .day-card h4 { font-family: var(--font-display); color: var(--nila); font-size: 1.1rem; margin-bottom: 6px; }
 .day-card p { margin: 0; font-size: .93rem; }
+.day-card .menu-dish { font-size: .93rem; margin: 0 0 6px; }
+.day-card .menu-dish:last-child { margin-bottom: 0; }
 
 /* ---------- Hostel ---------- */
 .hostel-intro { max-width: 640px; margin: 0 auto 44px; text-align: center; font-size: 1.05rem; }
@@ -904,6 +978,7 @@ table.menu-table {
   .menu-caption { margin-top: 0; }
   section { padding: 60px 0; }
   .footer-inner { grid-template-columns: 1fr; }
+  .thali-photo-band { grid-template-columns: repeat(2, 1fr); }
 }
 
 @media (max-width: 560px) {
