@@ -592,6 +592,7 @@ table.menu-table {
   margin: 0 0 8px;
 }
 .menu-dish:last-child { margin-bottom: 0; }
+.menu-dish strong { white-space: nowrap; }
 .dish-mark { width: 10px; height: 10px; flex-shrink: 0; margin-top: 4px; }
 .menu-legend {
   display: flex;
